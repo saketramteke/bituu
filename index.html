@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      padding: 60px 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    button {
+      background-color: #ff9800;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1rem;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #e68900;
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="headline">Welcome to Our Landing Page</h1>
+    <p>Experience innovation, creativity, and growth with us.</p>
+    <button onclick="showMessage()">Get Started</button>
+  </header>
+
+  <footer>
+    <p>&copy; 2025 Your Company | All rights reserved</p>
+  </footer>
+
+  <script>
+    // JavaScript to change headline dynamically
+    const messages = [
+      "Welcome to Our Landing Page",
+      "Your Growth Starts Here",
+      "Join Us and Make a Difference"
+    ];
+    let index = 0;
+
+    setInterval(() => {
+      document.getElementById("headline").textContent = messages[index];
+      index = (index + 1) % messages.length;
+    }, 3000);
+
+    // Button click function
+    function showMessage() {
+      alert("Thank you for getting started! Let’s go 🚀");
+    }
+  </script>
+</body>
+</html>
